@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,html,body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --white_color: #fff;
+    --black_color: #000;
+    --bg_color: #F2F0F1;
+    --p_color: #ffffff60;
+    --yallow_color: #FFC633;
+    --red_color: #FF3333;
+    --green_color: #01AB31;
+}
+
+h1,h2 {
+    font-family: 'Oswald', sans-serif;
+}
+h3,h4,h5,h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--p_color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1350px;
+}
+
+/* Start Header */
+header {
+    background: var(--white_color);
+}
+
+/* Start Top Header */
+header .top-header {
+    background: var(--black_color);
+    padding: 15px 0;
+}
+
+header .top-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header .top-header .container h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--white_color);
+}
+
+header .top-header .container h4 a {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white_color);
+}
+
+header .top-header .container i {
+    position: absolute;
+    right: 0;
+    color: var(--white_color);
+    text-align: center;
+}
+/* End Top Header */
+/* Start Bottom Header */
+header .bottom-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+header .bottom-header .container .nav-links {
+    display: flex;
+    gap: 35px;
+}
+header .bottom-header .nav-links li a {
+    color: var(--black_color);
+    transition: 0.3s;
+}
+header .bottom-header .nav-links > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+header .bottom-header .nav-links li a:hover,
+header .bottom-header .nav-links li.active a {
+    border-bottom: 2px solid var(--black_color);
+}
+header .bottom-header .search-box {
+    display: inline-block;
+    width: 577px;
+    position: relative;
+
+}
+header .bottom-header .search-box .search-input {
+    width: 100%; 
+    padding: 15px 40px; 
+    border-radius: 25px; 
+    background-color: #f8f8f8;
+    font-size: 16px; 
+    transition: border 0.3s ease-in-out;
+}
+header .bottom-header .search-input:focus {
+    border-color: #aaa;
+}
+
+header .bottom-header  .search-input::placeholder {
+    color: #bbb; /* Light gray placeholder */
+}
+
+
+header .bottom-header .search-box .search-icon {
+    position: absolute;
+    left: 10px; /* Adjust to align the icon */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #00000050;
+}
+header .bottom-header .icons {
+    display: flex;
+    gap: 20px;
+}
+header .bottom-header .icons .icon {
+    position: relative;
+    cursor: pointer;
+}
+header .bottom-header .icons .icon i {
+    color: var(--black_color);
+    font-size: 24px;
+}
+header .bottom-header .icons .icon .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: var(--red_color);
+    color: var(--white_color);
+    border-radius: 100%;
+    font-size: 11px;
+}
+
+/* End Bottom Header */
+/* End Header */
