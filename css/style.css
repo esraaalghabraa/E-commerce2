@@ -6,13 +6,14 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
 }
 
 :root {
     --white_color: #fff;
     --black_color: #000;
     --bg_color: #F2F0F1;
-    --p_color: #ffffff60;
+    --p_color: #00000080;
     --yallow_color: #FFC633;
     --red_color: #FF3333;
     --green_color: #01AB31;
@@ -48,22 +49,41 @@ img {
     max-width: 1350px;
 }
 
+
+.btn {
+    background: var(--black_color);
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--white_color);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    scale: 1.1;
+}
 /* Start Header */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     background: var(--white_color);
 }
 
 /* Start Top Header */
 header .top-header {
     background: var(--black_color);
-    padding: 15px 0;
+    height: 5vh;
 }
 
 header .top-header .container {
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: space-between;
 }
 
 header .top-header .container h4 {
@@ -80,14 +100,13 @@ header .top-header .container h4 a {
 }
 
 header .top-header .container i {
-    position: absolute;
-    right: 0;
+    float: right;
     color: var(--white_color);
-    text-align: center;
 }
 /* End Top Header */
 /* Start Bottom Header */
 header .bottom-header .container {
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +135,6 @@ header .bottom-header .search-box {
     display: inline-block;
     width: 577px;
     position: relative;
-
 }
 header .bottom-header .search-box .search-input {
     width: 100%; 
@@ -131,13 +149,13 @@ header .bottom-header .search-input:focus {
 }
 
 header .bottom-header  .search-input::placeholder {
-    color: #bbb; /* Light gray placeholder */
+    color: #bbb;
 }
 
 
 header .bottom-header .search-box .search-icon {
     position: absolute;
-    left: 10px; /* Adjust to align the icon */
+    left: 10px; 
     top: 50%;
     transform: translateY(-50%);
     font-size: 18px;
@@ -168,6 +186,490 @@ header .bottom-header .icons .icon .count {
     border-radius: 100%;
     font-size: 11px;
 }
-
 /* End Bottom Header */
 /* End Header */
+/* Start Hero Section */
+#hero {
+    padding-top: 130px;
+    background: var(--bg_color);
+}
+
+#hero .container {
+    height: 100%;
+}
+
+#hero .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .container .content .right-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#hero .container .content .right-section .title {
+    font-size: 50px;
+    line-height: 80px;
+}
+
+#hero .container .content .right-section > p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 90%;
+    color: var(--p_color);
+}
+#hero .container .content .right-section a {
+    width: 200px;
+    text-align: center;
+}
+#hero .container .content .right-section .store-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#hero .container .content .right-section .store-statistics span {
+    font-size: 40px;
+    font-weight: 600;
+}
+#hero .container .content .right-section .store-statistics p {
+    font-size: 14px;
+}
+#hero .container .content .left-section {
+    width: 45%;
+    position: relative;
+}
+
+#hero .container .content .left-section .star1 {
+    position: absolute;
+    width: 90px;
+    top: 50px;
+    right: -10px;
+}
+#hero .container .content .left-section .star2 {
+    position: absolute;
+    width: 50px;
+    top: 200px;
+    left: 0;
+}
+
+#brands .bottom-hero {
+    height: 100px;
+    background: var(--black_color);
+}
+
+#brands .bottom-hero .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brands .bottom-hero img {
+    width: 120px;
+}
+/* End Hero Section */
+
+/* Start Products Section */
+#products {
+    background: var(--white_color);
+    text-align: center;
+}
+
+#products .separetor {
+    height: 1px;
+    background: var(--bg_color);
+}
+#products .container {
+    margin-bottom: 50px;
+}
+#products .container .title {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+#products .container .products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+}
+
+#products .container .products .item-product {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#products .container .products .item-product .img-product {
+    width: 300px;
+    height: 300px;
+    background: var(--bg_color);
+    border-radius: 20px;
+    padding:30px;
+}
+
+#products .container .products .item-product .img-product img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Keeps the aspect ratio and prevents overflow */
+}
+
+#products .container .products .item-product p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px ;
+    color: var(--black_color);
+}
+
+#products .container .products .item-product p span {
+    font-size: 24px;
+    width: 700;
+    color: var(--black_color);
+    margin-right: 10px;
+}
+
+#products .container .products .item-product p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#products .container .products .item-product p del {
+    font-size: 24px;
+    width: 500;
+    color: var(--p_color);
+    margin-right: 10px;
+}
+
+#products .container .products .item-product p .discount {
+    font-size: 14px;
+    color: var(--red_color);
+    background: #ff333366;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.stars,
+.raiting {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.stars::before,
+.raiting::before {
+    content: "★★★★★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: gold;
+    width: 70%; 
+    overflow: hidden;
+}
+
+.stars span {
+    display: inline-block;
+    width: 100px; 
+}
+/* End Products Section */
+
+/* Start Products Styles Section */
+
+#products-styles {
+    margin-bottom: 50px;
+}
+
+#products-styles .container {
+    background: var(--bg_color);
+    text-align: center;
+    border-radius: 50px;
+}
+
+#products-styles .container .title {
+    padding-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#products-styles .container .gallary {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#products-styles .container .gallary .style-item {
+    width: 407px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--white_color);
+    position: relative;
+}
+
+#products-styles .container .gallary .style-item.large {
+    position: relative;
+    width: 684px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--white_color);
+}
+
+#products-styles .container .gallary p {
+    position: absolute;
+    left: 10px;
+    font-size: 36px;
+    color: var(--black_color);
+}
+
+/* End Products Styles Section */
+
+/* Start Customer Section */
+
+/* End Customer Section */
+/* 
+.reviews-section {
+    margin: 50px 0;
+}
+
+.reviews-section .title {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviews-section .title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reviews-section .title .arrows-conrolling #scroll-left-btn {
+    font-size: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.reviews-section .title .arrows-conrolling #scroll-right-btn {
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.review-card {
+    border-radius: 8px;
+    margin: 0 10px;
+    border: 1px solid var(--bg_color);
+    width: 400px;
+    padding: 28px 30px;
+    transition: transform 0.3s ease;
+}
+
+.verified {
+    color: var(--green_color);
+    font-size: 18px;
+}
+
+.review-card .raiting {
+    margin-bottom: 20px;
+}
+
+.review-card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.review-card h2 i {
+    width: 24px;
+    color: var(--green_color);
+}
+
+.review-card p {
+    font-size: 16px;
+    line-height: 22px;
+} */
+
+
+
+.reviews-section {
+    margin: 50px 0;
+}
+
+.reviews-section .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reviews-section .title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reviews-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.reviews-wrapper {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+    width: 80%;
+    padding: 0 50px; /* Creates spacing for the "plate" effect */
+}
+
+.review-card {
+    min-width: 380px;
+    min-height: 230px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid var(--bg_color);
+    transition: transform 0.3s ease;
+}
+
+.review-card .card-content .rating {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.review-card .card-content .rating::before {
+    content: "★★★★★";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: gold;
+    width: 70%; 
+    overflow: hidden;
+}
+
+.review-card .rating span {
+    display: inline-block;
+    width: 100px; 
+}
+.review-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-card .card-content p {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--p_color);
+}
+
+.verified {
+    color: var(--green_color);
+    font-size: 18px;
+}
+/* The arrows for moving the cards */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+/* Plate effect on the sides of the card tray */
+.reviews-container::before,
+.reviews-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    z-index: 5;
+}
+
+.reviews-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+}
+
+.reviews-container::before {
+    left: 0;
+}
+
+
+
+
+
+/* 
+.arrow {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+} */
